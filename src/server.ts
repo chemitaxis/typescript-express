@@ -80,7 +80,22 @@ export class Server {
       }
     );
 
-    // use router middleware
+    /**
+     *
+     * @api {post} /api/analytics/:idGenially Get the Google Analytics info of the Genially
+     * @apiName Get Analytics information
+     * @apiGroup analytics
+     * @apiVersion  1.0.0
+     * @apiPermission user must be logged
+     *
+     * @apiParam  {String} DateInit start date of the analytics
+     * @apiParam  {String} DateEnd end date of the analytics
+     *
+     * @apiSuccess {[Event](#api-Custom_Types-ObjectEvent)} events The requested event(s).
+     *
+     *
+     *
+     */
     router.get(
       '/offline',
       // tslint:disable-next-line:variable-name
